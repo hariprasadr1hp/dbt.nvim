@@ -1,0 +1,10 @@
+# Ignore Neovim swap and temp files
+*.swp
+*.tmp
+*.bak
+
+# Ignore DBT artifacts if testing in-repo
+target/
+dbt_modules/
+logs/
+

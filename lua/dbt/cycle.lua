@@ -1,6 +1,6 @@
--- lua/plugins/custom/dbt/cycle.lua
+-- dbt/cycle.lua
 
-local core = require("plugins.custom.dbt.core")
+local core = require("dbt.core")
 
 local M = {}
 

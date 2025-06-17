@@ -1,6 +1,6 @@
 -- lua/plugins/custom/dbt/diff.lua
 
-local core = require("plugins.custom.dbt.core")
+local core = require("dbt.core")
 local M = {}
 
 function M.diff_model_vs_compiled()

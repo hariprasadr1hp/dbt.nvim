@@ -1,4 +1,4 @@
--- lua/plugins/custom/dbt/core.lua
+-- dbt/core.lua
 
 local M = {}
 

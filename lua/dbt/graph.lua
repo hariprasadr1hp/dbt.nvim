@@ -1,6 +1,6 @@
--- lua/plugins/custom/dbt/graph.lua
+-- dbt/graph.lua
 
-local core = require("plugins.custom.dbt.core")
+local core = require("dbt.core")
 
 local M = {}
 local manifest = nil

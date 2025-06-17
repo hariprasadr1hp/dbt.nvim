@@ -1,6 +1,6 @@
--- lua/plugins/custom/dbt/jump.lua
+-- dbt/jump.lua
 
-local core = require("plugins.custom.dbt.core")
+local core = require("dbt.core")
 
 local M = {}
 
@@ -26,8 +26,7 @@ end
 
 function M.jump_to_model()
     local buf_path = core.normalize(vim.api.nvim_buf_get_name(0))
-    local rel =
-        core.extract_model_relative_path(buf_path, core.normalize(vim.env.DBT_PROJECT_DIR), vim.env.DBT_PROJECT_NAME)
+    local rel = core.extract_model_relative_path(buf_path, core.normalize(vim.env.DBT_PROJECT_DIR))
     if rel then
         jump_to_variant(rel, "models")
     end
@@ -35,8 +34,7 @@ end
 
 function M.jump_to_compiled()
     local buf_path = core.normalize(vim.api.nvim_buf_get_name(0))
-    local rel =
-        core.extract_model_relative_path(buf_path, core.normalize(vim.env.DBT_PROJECT_DIR), vim.env.DBT_PROJECT_NAME)
+    local rel = core.extract_model_relative_path(buf_path, core.normalize(vim.env.DBT_PROJECT_DIR))
     if rel then
         jump_to_variant(rel, "compiled")
     end
@@ -44,8 +42,7 @@ end
 
 function M.jump_to_run()
     local buf_path = core.normalize(vim.api.nvim_buf_get_name(0))
-    local rel =
-        core.extract_model_relative_path(buf_path, core.normalize(vim.env.DBT_PROJECT_DIR), vim.env.DBT_PROJECT_NAME)
+    local rel = core.extract_model_relative_path(buf_path, core.normalize(vim.env.DBT_PROJECT_DIR))
     if rel then
         jump_to_variant(rel, "run")
     end
